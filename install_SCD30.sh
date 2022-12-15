@@ -34,22 +34,24 @@
     sudo rm -rf /var/lib/reef-pi/SCD30
 
     echo "Copying new service and setting execution rights..."
-    sudo cp SCD30/SCD30.service /etc/systemd/system/SCD30.service
+    sudo cp src/SCD30.service /etc/systemd/system/SCD30.service
     sudo chmod -R 770 /etc/systemd/system/SCD30.service
     
     # create directory and copy new files
     echo "Creating Reef-Pi directory and copying new files..."
     sudo mkdir /var/lib/reef-pi/SCD30
-    sudo cp SCD30/SCD30.cpp          /var/lib/reef-pi/SCD30/SCD30.cpp
-    sudo cp SCD30/SCD30FetchData     /var/lib/reef-pi/SCD30/SCD30FetchData
-    sudo cp SCD30/SCD30FetchData.cpp /var/lib/reef-pi/SCD30/SCD30FetchData.cpp
-    sudo cp SCD30/SCD30Control       /var/lib/reef-pi/SCD30/SCD30Control
-    sudo cp SCD30/SCD30Control.cpp   /var/lib/reef-pi/SCD30/SCD30Control.cpp
+    sudo cp src/SCD30.cpp          /var/lib/reef-pi/SCD30/SCD30.cpp
+    sudo cp src/SCD30FetchData     /var/lib/reef-pi/SCD30/SCD30FetchData
+    sudo cp src/SCD30FetchData.cpp /var/lib/reef-pi/SCD30/SCD30FetchData.cpp
+    sudo cp src/SCD30Control       /var/lib/reef-pi/SCD30/SCD30Control
+    sudo cp src/SCD30Control.cpp   /var/lib/reef-pi/SCD30/SCD30Control.cpp
     # set rights
     sudo chmod -R 777 /var/lib/reef-pi/SCD30/
     
     echo "Deleting install files..."
-    sudo rm -r SCD30/
+    sudo rm -r src/
+	sudo rm -r LICENSE
+	sudo rm -r README.md
     sudo rm SCD30.zip
     sudo rm install_SCD30.sh
 
