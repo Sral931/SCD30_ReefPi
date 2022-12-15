@@ -1,0 +1,14 @@
+[Unit]
+Description=reef-pi SCD30
+After=network.target
+
+[Service]
+ExecStart=/var/lib/reef-pi/SCD30/SCD30FetchData
+WorkingDirectory=/var/lib/reef-pi/SCD30/
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
