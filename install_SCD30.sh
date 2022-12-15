@@ -52,7 +52,7 @@
     sudo rm -r src/
 	sudo rm -r LICENSE
 	sudo rm -r README.md
-    sudo rm SCD30.zip
+    sudo rm SCD30_ReefPi_1.1.zip
     sudo rm install_SCD30.sh
 
     echo "Establishing and starting service..."
